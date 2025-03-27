@@ -3,14 +3,15 @@
 let i = 0;
 
 const addTodoHandler = () => {
-  const todoValue = document.getElementById("inputTodo").value;
+  const inputTodo = document.getElementById("inputTodo");
   const listItem = document.createElement("li");
   const listItemValue = document.createElement("p");
   const removeButton = document.createElement("button");
   listItem.setAttribute("id", `listItem${i}`);
   removeButton.setAttribute("id", `removeTodoButton${i}`);
 
-  listItemValue.textContent = todoValue;
+  listItemValue.textContent = inputTodo.value;
+  inputTodo.value = "";
   removeButton.textContent = "削除";
 
   listItem.appendChild(listItemValue);
