@@ -4,6 +4,11 @@ let i = 0;
 
 const addTodoHandler = () => {
   const inputTodo = document.getElementById("inputTodo");
+
+  if (inputTodo.value == "") {
+    return;
+  }
+
   const listItem = document.createElement("li");
   const listItemValue = document.createElement("p");
   const removeButton = document.createElement("button");
