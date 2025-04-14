@@ -58,6 +58,7 @@ class TodoList {
     if (!todoContent.trim()) return;
 
     new Todo(todoContent);
+    todoInput.value = "";
   }
 
   private removeTodoEventHandler() {

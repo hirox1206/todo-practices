@@ -40,6 +40,7 @@ class TodoList {
         if (!todoContent.trim())
             return;
         new Todo(todoContent);
+        todoInput.value = "";
     }
     removeTodoEventHandler() {
         const checkedItems = this.checkedItems();
